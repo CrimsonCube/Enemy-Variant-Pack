@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 local EnemyVariantPack = RegisterMod("Enemy Variant Pack", 1)
 local game = Game()
-local SPAWN_CHANCE = 0.2
+require("config")
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------MC_NPC_UPDATE--------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -92,8 +92,8 @@ function EnemyVariantPack:update(entity)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Pestilence Head-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_DEAHTS_HEAD and entity.Variant == 0 and entity.SubType ~= 16 then
-		entity:Morph(entity.Type, 1, 16, -1)
+	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_DEATHS_HEAD and entity.Variant == 1 and entity.SubType ~= 16 then
+		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Devil Nightcrawler-----------------------------
