@@ -67,42 +67,47 @@ function EnemyVariantPack:update(entity)
 ------------------------------------------------------------------------------------------------SPAWN SYSTEM--------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	-----------------------------Ghost Clotty-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if GHOST_CLOTTY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
-	-----------------------------Sick Boom Fly-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BOOMFLY and entity.Variant == 0 and entity.SubType ~= 16 then
+	-----------------------------Creepy Boom Fly-----------------------------
+	if CREEPY_BOOM_FLY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BOOMFLY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Crying Host-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_HOST and entity.Variant == 0 and entity.SubType ~= 16 then
+	if CRYING_HOST and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_HOST and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Greed Baby-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BABY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if GREED_BABY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BABY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Lenny Fatty-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_FATTY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if LENNY_FATTY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_FATTY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Pestilence Head-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_DEATHS_HEAD and entity.Variant == 1 and entity.SubType ~= 16 then
+	if PESTILENCE_HEAD and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_DEATHS_HEAD and entity.Variant == 1 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Devil Nightcrawler-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_NIGHT_CRAWLER and entity.Variant == 0 and entity.SubType ~= 16 then
+	if DEVIL_NIGHTCRAWLER and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_NIGHT_CRAWLER and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Ghost Mega Clotty-----------------------------
-	if entity.FrameCount <= 1 and rng:RandomFloat() < SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_MEGA_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if GHOST_MEGA_CLOTTY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_MEGA_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
+		entity:Morph(entity.Type, entity.Variant, 16, -1)
+		entity.HitPoints = entity.MaxHitPoints
+	end
+	-----------------------------Ball of Flies-----------------------------
+	if BALL_OF_FLIES and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_MOTER and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
@@ -118,7 +123,7 @@ function EnemyVariantPack:damage(entity,damage,_,_,_)
 		Isaac.Spawn(EntityType.ENTITY_MOTER, 0, 0, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
 		Isaac.Spawn(EntityType.ENTITY_MOTER, 0, 0, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
 	end
-	-----------------------------Sick Boom Fly-----------------------------
+	-----------------------------Creepy Boom Fly-----------------------------
 	if entity.Type == 25 and entity.Variant == 0 and entity.SubType == 16 and damage >= entity.HitPoints then
 		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(math.pi/4)*6,math.sin(math.pi/4)*6), entity)
 		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(3*math.pi/4)*6,math.sin(3*math.pi/4)*6), entity)
