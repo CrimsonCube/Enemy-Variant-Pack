@@ -35,9 +35,9 @@
 	amount="0"
 	blood="0" bone="0" eye="0" gut="0" worm="0" poop="0"
 /></entity>
-<!-----------------------------Sick Boom Fly----------------------------->
+<!-----------------------------Creepy Boom Fly----------------------------->
 <entity 
-	name="Sick Boom Fly" anm2path="sick boom fly.anm2"
+	name="Creepy Boom Fly" anm2path="creepy boom fly.anm2"
 	id="25" variant="0" subtype="16"
 	baseHP="15" stageHP="0"
 	boss="0" champion="1" reroll="true" portrait="19" shutdoors="true"
@@ -51,7 +51,7 @@
 <entity 
 	name="Crying Host" anm2path="crying host.anm2"
 	id="27" variant="0" subtype="16"
-	baseHP="14" stageHP="0"
+	baseHP="15" stageHP="0"
 	boss="0" champion="1" reroll="true" portrait="24" shutdoors="true"
 	collisionDamage="0" collisionMass="15" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="25"
 	bestiary="true" bestiaryTransform="0,0,1" bestiaryAnim="Shoot"

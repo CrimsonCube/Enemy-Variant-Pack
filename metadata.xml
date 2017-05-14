@@ -1,8 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<name>Enemy Variant Pack</name>
-	<directory>enemyvariantpack</directory>
-	<description/>
-	<version>1.0</version>
-	<visibility/>
+    <name>Enemy Variant Pack</name>
+    <directory>enemyvariantpack</directory>
+    <id>925168037</id>
+    <description>[img]http://i.imgur.com/sKC1y1V.png[/img]
+[img]https://i.imgur.com/PDiIKyo.jpg[/img]
+[img]https://i.imgur.com/HfXN4LH.jpg[/img]
+[img]https://i.imgur.com/pTIpwGf.jpg[/img]
+[img]https://i.imgur.com/zFZNywr.jpg[/img]
+[img]https://i.imgur.com/ZVvcW0i.jpg[/img]
+[img]https://i.imgur.com/izx3yPC.jpg[/img]
+[img]https://i.imgur.com/p861NGS.jpg[/img]
+[img]https://i.imgur.com/swdGYrx.jpg[/img]
+By default all of the variants have 20% chance to appear in place of corresponding enemy.
+You can easily adjust spawn chance or disable some variants in config.lua file in the mod's directory (Documents/My Games/The Binding of Isaac Afterbirth+ Mods/enemyvariantpack_925168037)</description>
+    <version>1.0.2</version>
+    <visibility>Public</visibility>
+    <tag id="Lua"/>
+    <tag id="Enemies"/>
 </metadata>
-
