@@ -1,12 +1,20 @@
---Spawn chance from 0 to 1, 0 being 0% and 1 being 100%. Default is 0.2.
-EVP_SPAWN_CHANCE = 0.2
---Enable or disable specific enemies with "true" or "false"
+--Enable or disable specific enemies with "true" or "false" Default is true (except Ball of Flies).
 CREEPY_BOOM_FLY = true
 CRYING_HOST = true
 GREED_BABY = true
 DEVIL_NIGHTCRAWLER = true
-BALL_OF_FLIES = true
+BALL_OF_FLIES = false
 PESTILENCE_HEAD = true
 GHOST_CLOTTY = true
 GHOST_MEGA_CLOTTY = true
 LENNY_FATTY = true
+--Spawn chance from 0 to 1, 0 being 0% and 1 being 100%. Default is 0.2.
+CREEPY_BOOM_FLY_SPAWN_CHANCE = 0.2
+CRYING_HOST_SPAWN_CHANCE = 0.2
+GREED_BABY_SPAWN_CHANCE = 0.2
+DEVIL_NIGHTCRAWLER_SPAWN_CHANCE = 0.2
+BALL_OF_FLIES_SPAWN_CHANCE = 0.2
+PESTILENCE_HEAD_SPAWN_CHANCE = 0.2
+GHOST_CLOTTY_SPAWN_CHANCE = 0.2
+GHOST_MEGA_CLOTTY_SPAWN_CHANCE = 0.2
+LENNY_FATTY_SPAWN_CHANCE = 0.2

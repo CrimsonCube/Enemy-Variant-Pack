@@ -12,25 +12,19 @@ function EnemyVariantPack:update(entity)
 	local rng = entity:GetDropRNG()
 	-----------------------------Ghost Clotty-----------------------------
 	if entity.Type == 15 and entity.Variant == 0 and entity.SubType == 16 and sprite:IsEventTriggered("Shoot") then
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(math.pi/2)*4,math.sin(math.pi/2)*4), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(math.pi)*4,math.sin(math.pi)*4), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(3*math.pi/2)*4,math.sin(3*math.pi/2)*4), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(2*math.pi)*4,math.sin(2*math.pi)*4), entity)
+		for i = 0, 270, 90 do
+				Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector.FromAngle(i) * 4, entity)
+		end
 	end
 	-----------------------------Crying Host-----------------------------
 	if entity.Type == 27 and entity.Variant == 0 and entity.SubType == 16 and sprite:IsEventTriggered("Shoot") then
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(math.pi/2)*8,math.sin(math.pi/2)*8), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(math.pi)*8,math.sin(math.pi)*8), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(3*math.pi/2)*8,math.sin(3*math.pi/2)*8), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(2*math.pi)*8,math.sin(2*math.pi)*8), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(math.pi/4)*8,math.sin(math.pi/4)*8), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(3*math.pi/4)*8,math.sin(3*math.pi/4)*8), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(5*math.pi/4)*8,math.sin(5*math.pi/4)*8), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(7*math.pi/4)*8,math.sin(7*math.pi/4)*8), entity)
+		for i = 0, 315, 45 do
+				Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector.FromAngle(i) * 6, entity)
+		end
 	end
 	-----------------------------Greed Baby-----------------------------
-	if entity.Type == 38 and entity.Variant == 0 and entity.SubType == 16 and sprite:IsEventTriggered("Spawn") then
-		Isaac.Spawn(18, 0, 17, entity.Position, Vector(0,0), entity)
+	if entity.Type == 36 and entity.Variant == 0 and entity.SubType == 16 and sprite:IsEventTriggered("Spawn") then
+		Isaac.Spawn(16, 0, 17, entity.Position, Vector(0,0), entity)
 	end
 	-----------------------------Devil Nightcrawler-----------------------------
 	if entity.Type == 255 and entity.Variant == 0 and entity.SubType == 16 then
@@ -49,65 +43,64 @@ function EnemyVariantPack:update(entity)
 			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(0+math.random(0,10),-60)), Vector(0,0), entity)
 			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(-60,0+math.random(0,10))), Vector(0,0), entity)
 		end
-		if sprite:IsEventTriggered("4") then
-			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(0+math.random(0,10),90)), Vector(0,0), entity)
-			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(90,0+math.random(0,10))), Vector(0,0), entity)
-			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(0+math.random(0,10),-90)), Vector(0,0), entity)
-			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(-90,0+math.random(0,10))), Vector(0,0), entity)
-		end
+--		if sprite:IsEventTriggered("4") then
+--			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(0+math.random(0,10),90)), Vector(0,0), entity)
+--			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(90,0+math.random(0,10))), Vector(0,0), entity)
+--			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(0+math.random(0,10),-90)), Vector(0,0), entity)
+--			Isaac.Spawn(1000, 22, 0, entity.Position:__add(Vector(-90,0+math.random(0,10))), Vector(0,0), entity)
+--		end
 	end
 	-----------------------------Ghost Mega Clotty-----------------------------
-	if entity.Type == 282 and entity.Variant == 0 and entity.SubType == 16 and sprite:IsEventTriggered("Shoot") then
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(math.pi/2)*4,math.sin(math.pi/2)*4), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(math.pi)*4,math.sin(math.pi)*4), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(3*math.pi/2)*4,math.sin(3*math.pi/2)*4), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector(math.cos(2*math.pi)*4,math.sin(2*math.pi)*4), entity)
+	if entity.Type == 262 and entity.Variant == 0 and entity.SubType == 16 and sprite:IsEventTriggered("Shoot") then
+		for i = 0, 270, 90 do
+				Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 6, 0, entity.Position, Vector.FromAngle(i) * 4, entity)
+		end
 	end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------SPAWN SYSTEM--------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	-----------------------------Ghost Clotty-----------------------------
-	if GHOST_CLOTTY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if GHOST_CLOTTY and entity.FrameCount <= 1 and rng:RandomFloat() < GHOST_CLOTTY_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Creepy Boom Fly-----------------------------
-	if CREEPY_BOOM_FLY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BOOMFLY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if CREEPY_BOOM_FLY and entity.FrameCount <= 1 and rng:RandomFloat() < CREEPY_BOOM_FLY_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BOOMFLY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Crying Host-----------------------------
-	if CRYING_HOST and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_HOST and entity.Variant == 0 and entity.SubType ~= 16 then
+	if CRYING_HOST and entity.FrameCount <= 1 and rng:RandomFloat() < CRYING_HOST_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_HOST and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Greed Baby-----------------------------
-	if GREED_BABY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BABY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if GREED_BABY and entity.FrameCount <= 1 and rng:RandomFloat() < GREED_BABY_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_BABY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Lenny Fatty-----------------------------
-	if LENNY_FATTY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_FATTY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if LENNY_FATTY and entity.FrameCount <= 1 and rng:RandomFloat() < LENNY_FATTY_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_FATTY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Pestilence Head-----------------------------
-	if PESTILENCE_HEAD and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_DEATHS_HEAD and entity.Variant == 1 and entity.SubType ~= 16 then
+	if PESTILENCE_HEAD and entity.FrameCount <= 1 and rng:RandomFloat() < PESTILENCE_HEAD_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_DEATHS_HEAD and entity.Variant == 1 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Devil Nightcrawler-----------------------------
-	if DEVIL_NIGHTCRAWLER and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_NIGHT_CRAWLER and entity.Variant == 0 and entity.SubType ~= 16 then
+	if DEVIL_NIGHTCRAWLER and entity.FrameCount <= 1 and rng:RandomFloat() < DEVIL_NIGHTCRAWLER_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_NIGHT_CRAWLER and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Ghost Mega Clotty-----------------------------
-	if GHOST_MEGA_CLOTTY and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_MEGA_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
+	if GHOST_MEGA_CLOTTY and entity.FrameCount <= 1 and rng:RandomFloat() < GHOST_MEGA_CLOTTY_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_MEGA_CLOTTY and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
 	-----------------------------Ball of Flies-----------------------------
-	if BALL_OF_FLIES and entity.FrameCount <= 1 and rng:RandomFloat() < EVP_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_MOTER and entity.Variant == 0 and entity.SubType ~= 16 then
+	if BALL_OF_FLIES and entity.FrameCount <= 1 and rng:RandomFloat() < BALL_OF_FLIES_SPAWN_CHANCE and entity.SpawnerType ~= EntityType.ENTITY_FAMILIAR and entity.Type == EntityType.ENTITY_MOTER and entity.Variant == 0 and entity.SubType ~= 16 then
 		entity:Morph(entity.Type, entity.Variant, 16, -1)
 		entity.HitPoints = entity.MaxHitPoints
 	end
@@ -119,16 +112,15 @@ function EnemyVariantPack:damage(entity,damage,_,_,_)
 	local sprite = entity:GetSprite()
 	local rng = entity:GetDropRNG()
 	-----------------------------Ball of Flies-----------------------------
-	if entity.Type == 18 and entity.Variant == 0 and entity.SubType == 16 and damage >= entity.HitPoints then
+	if entity.Type == 16 and entity.Variant == 0 and entity.SubType == 16 and damage >= entity.HitPoints then
 		Isaac.Spawn(EntityType.ENTITY_MOTER, 0, 0, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
 		Isaac.Spawn(EntityType.ENTITY_MOTER, 0, 0, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
 	end
 	-----------------------------Creepy Boom Fly-----------------------------
 	if entity.Type == 25 and entity.Variant == 0 and entity.SubType == 16 and damage >= entity.HitPoints then
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(math.pi/4)*6,math.sin(math.pi/4)*6), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(3*math.pi/4)*6,math.sin(3*math.pi/4)*6), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(5*math.pi/4)*6,math.sin(5*math.pi/4)*6), entity)
-		Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector(math.cos(7*math.pi/4)*6,math.sin(7*math.pi/4)*6), entity)
+		for i = 45, 315, 90 do
+				Isaac.Spawn(EntityType.ENTITY_PROJECTILE, 0, 0, entity.Position, Vector.FromAngle(i) * 6, entity)
+		end
 		Isaac.Spawn(1000, 23, 0, entity.Position, Vector(0,0), entity)
 		Isaac.Spawn(1000, 23, 0, entity.Position:__add(Vector(-17.5,-17.5)), Vector(0,0), entity)
 		Isaac.Spawn(1000, 23, 0, entity.Position:__add(Vector(0,-20)), Vector(0,0), entity)
@@ -151,45 +143,45 @@ function EnemyVariantPack:damage(entity,damage,_,_,_)
 		--Fly 1--
 		if fly1 <= 0.30 then
 			Isaac.Spawn(13, 0, 0, entity.Position:__add(Vector(-5,0)), Vector(0,0), entity)
-		elseif fly1 <= 0.80 then
-			Isaac.Spawn(18, 0, 0, entity.Position:__add(Vector(-5,0)), Vector(0,0), entity)
+		elseif fly1 <= 0.60 then
+			Isaac.Spawn(16, 0, 0, entity.Position:__add(Vector(-5,0)), Vector(0,0), entity)
 		elseif fly1 <= 0.95 then
-			Isaac.Spawn(80, 0, 0, entity.Position:__add(Vector(-5,0)), Vector(0,0), entity)
+			Isaac.Spawn(60, 0, 0, entity.Position:__add(Vector(-5,0)), Vector(0,0), entity)
 		else
-			Isaac.Spawn(18, 0, 16, entity.Position:__add(Vector(-5,0)), Vector(0,0), entity)
+			Isaac.Spawn(16, 0, 16, entity.Position:__add(Vector(-5,0)), Vector(0,0), entity)
 		end
 		--Fly 2--
 		if fly2 <= 0.30 then
 			Isaac.Spawn(13, 0, 0, entity.Position:__add(Vector(5,0)), Vector(0,0), entity)
-		elseif fly2 <= 0.80 then
-			Isaac.Spawn(18, 0, 0, entity.Position:__add(Vector(5,0)), Vector(0,0), entity)
+		elseif fly2 <= 0.60 then
+			Isaac.Spawn(16, 0, 0, entity.Position:__add(Vector(5,0)), Vector(0,0), entity)
 		elseif fly2 <= 0.95 then
-			Isaac.Spawn(80, 0, 0, entity.Position:__add(Vector(5,0)), Vector(0,0), entity)
+			Isaac.Spawn(60, 0, 0, entity.Position:__add(Vector(5,0)), Vector(0,0), entity)
 		else
-			Isaac.Spawn(18, 0, 16, entity.Position:__add(Vector(5,0)), Vector(0,0), entity)
+			Isaac.Spawn(16, 0, 16, entity.Position:__add(Vector(5,0)), Vector(0,0), entity)
 		end
 		--Fly 3--
 		if fly3If <= 0.50 then
 			if fly3 <= 0.30 then
 				Isaac.Spawn(13, 0, 0, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
-			elseif fly3 <= 0.80 then
-				Isaac.Spawn(18, 0, 0, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
+			elseif fly3 <= 0.60 then
+				Isaac.Spawn(16, 0, 0, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
 			elseif fly3 <= 0.95 then
-				Isaac.Spawn(80, 0, 0, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
+				Isaac.Spawn(60, 0, 0, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
 			else
-				Isaac.Spawn(18, 0, 16, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
+				Isaac.Spawn(16, 0, 16, entity.Position:__add(Vector(0,-5)), Vector(0,0), entity)
 			end
 		end
 		--Fly 4--
 		if fly4If <= 0.50 then
 			if fly4 <= 0.30 then
 				Isaac.Spawn(13, 0, 0, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
-			elseif fly4 <= 0.80 then
-				Isaac.Spawn(18, 0, 0, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
+			elseif fly4 <= 0.60 then
+				Isaac.Spawn(16, 0, 0, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
 			elseif fly4 <= 0.95 then
-				Isaac.Spawn(80, 0, 0, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
+				Isaac.Spawn(60, 0, 0, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
 			else
-				Isaac.Spawn(18, 0, 16, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
+				Isaac.Spawn(16, 0, 16, entity.Position:__add(Vector(0,5)), Vector(0,0), entity)
 			end
 		end
 	end
